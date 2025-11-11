@@ -12,9 +12,10 @@ const transporter = nodemailer.createTransport({
 });
 
 // Verify connection configuration
-transporter.verify()
+transporter
+  .verify()
   .then(() => logger.info('Email transporter configured'))
-  .catch(err => logger.error('Email transporter verification failed', err));
+  .catch((err) => logger.error('Email transporter verification failed', err));
 
 /**
  * Send an email using the configured transporter.
