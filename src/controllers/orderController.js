@@ -9,7 +9,7 @@ import logger from '../utils/logger.js';
 export const createOrder = async (req, res, next) => {
   try {
     const {
-      orderItems,
+      orderItem,
       shippingAddress,
       paymentMethod,
       itemsPrice,
